@@ -16,10 +16,10 @@ service Hello {
         option (google.api.http) = {
             get: "/api/v1/hello"
         };
-        option (jzero.gateway.http) = {
+        option (jzero.api.http) = {
             middleware: "Auth"
         };
-        option (jzero.gateway.zrpc) = {
+        option (jzero.api.zrpc) = {
             middleware: "Auth"
         };
     };
@@ -28,10 +28,10 @@ service Hello {
 
 ```protobuf
 service Hello {
-    option (jzero.gateway.http_group) = {
+    option (jzero.api.http_group) = {
         middleware: "Auth"
     };
-    option (jzero.gateway.zrpc_group) = {
+    option (jzero.api.zrpc_group) = {
         middleware: "Auth"
     };
 

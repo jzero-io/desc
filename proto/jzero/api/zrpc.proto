@@ -1,19 +1,17 @@
 syntax = "proto3";
 
-package jzero.gateway;
+package jzero.api;
 
 import "google/protobuf/descriptor.proto";
 
-option go_package = "github.com/jzero-io/protoc-gen-jzero/gateway";
-
 extend google.protobuf.MethodOptions {
-  HttpRule http = 10000;
+  ZrpcRule zrpc = 1099;
 }
 
 extend google.protobuf.ServiceOptions {
-  HttpRule http_group = 10001;
+  ZrpcRule zrpc_group = 2;
 }
 
-message HttpRule {
+message ZrpcRule {
   string middleware = 1;
 }
