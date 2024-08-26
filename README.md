@@ -1,6 +1,10 @@
 # desc
 jzero common desc
 
+```shell
+protoc -I./third_party third_party/jzero/api/http.proto --go_out third_party/jzero/api
+```
+
 ## proto
 
 ### jzero
